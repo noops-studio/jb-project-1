@@ -1,0 +1,73 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    background-image: url('../images/tile.jpg');
+  }
+  
+  h1 {
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+  }
+  
+  .task-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-image: url('../images/tile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .task-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .task-card {
+    position: relative;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  
+  .task-card.fade-in {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .task-card.fade-out {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  
+  .task-card:hover .delete-btn {
+    opacity: 1;
+  }
+  
+  .task-card .task-content {
+    max-height: 100px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+  }
+  
+  .task-card .due-date {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: right;
+  }
+  
+  .delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  #taskForm {
+    background-image: url('../images/formbg.jpg');
+  }
